@@ -1,5 +1,5 @@
 .header {
-  background: #0D0D0D;
+  /* background: #0D0D0D; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +7,12 @@
   position: relative;
 }
 
+.icon {
+  color: #A020F0
+}
+.name {
+  color: #A020F0
+}
 .newTaskForm {
   position: absolute;
   height: 54px;
@@ -24,7 +30,7 @@
   color: #fff;
   background: #262626;
   border: 1px solid #0D0D0D;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 0 16px;
   font-size: 16px;
 }
@@ -36,10 +42,10 @@
 .newTaskForm button {
   height: 100%;
   padding: 0 16px;
-  background: #1E6F9F;
+  background: #A020F0;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   gap: 6px;

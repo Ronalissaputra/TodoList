@@ -1,11 +1,14 @@
-import styles from './task.module.css';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
-import { TbTrash } from 'react-icons/tb';
+import styles from "./task.module.css";
+import { BsFillCheckCircleFill } from "react-icons/bs";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export function Task({ task, onDelete, onComplete }) {
   return (
     <div className={styles.task}>
-      <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>
+      <button
+        className={styles.checkContainer}
+        onClick={() => onComplete(task.id)}
+      >
         {task.isCompleted ? <BsFillCheckCircleFill /> : <div />}
       </button>
 
@@ -14,8 +17,8 @@ export function Task({ task, onDelete, onComplete }) {
       </p>
 
       <button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
-        <TbTrash size={20} />
+        <RiDeleteBin6Line size={20} />
       </button>
     </div>
-  )
+  );
 }

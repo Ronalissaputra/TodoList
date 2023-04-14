@@ -1,16 +1,17 @@
-import todoLogo from '../../assets/todoLogo.svg';
-import styles from './header.module.css';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { useState } from 'react';
+import todoLogo from "../../assets/todoLogo.svg";
+import styles from "./header.module.css";
+import { FaCat } from "react-icons/fa";
+import { RiBearSmileFill } from "react-icons/ri";
+import { useState } from "react";
 
 export function Header({ handleAddTask }) {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
 
     handleAddTask(title);
-    setTitle('');
+    setTitle("");
   }
 
   function onChangeTitle(event) {
@@ -19,12 +20,22 @@ export function Header({ handleAddTask }) {
 
   return (
     <header className={styles.header}>
-      <img src={todoLogo} />
+      <FaCat
+        style={{ width: "80px", height: "80px" }}
+        className={styles.icon}
+      />
+
+      <h1 className={styles.name}> Tugas Satriani</h1>
 
       <form onSubmit={handleSubmit} className={styles.newTaskForm}>
-        <input placeholder="Add a new task" type="text" onChange={onChangeTitle} value={title} />
-        <button>Create <AiOutlinePlusCircle size={20} /></button>
+        <input
+          placeholder="Buat tugas baru.."
+          type="text"
+          onChange={onChangeTitle}
+          value={title}
+        />
+        <button>Tambah</button>
       </form>
     </header>
-  )
+  );
 }
